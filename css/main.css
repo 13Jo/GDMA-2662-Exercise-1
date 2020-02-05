@@ -1,0 +1,231 @@
+/*--------------------------------------------------------------
+>>> CSS STANDARDS
+----------------------------------------------------------------
+1. Place in appropriate section
+2. Add new sections to the Table of Contents as needed
+3. Order properties consistently inside each declaration i.e. alphabetically or by function 
+4. Declaration selectors should each occupy a new line
+5. Enter one new line between rules
+6. Enter more than one new line between categories 
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+1.0 - Settings: used with preprocessors and contain font, colors definitions, etc.
+2.0 - Tools: globally used mixins and functions. Use for preprocessor only.
+3.0 - Generic: reset and/or normalize styles, box-sizing definition, etc. 
+4.0 - Elements: styling for bare/generic HTML elements 
+        - Forms
+        - Lists
+        - Media
+        - Tables
+        - Typography: Headings, Paragraphs, Blockquotes, Anchors
+5.0 - Objects: class-based selectors which define undecorated design patterns, building blocks
+        - Framework
+6.0 - Components: specific designed components
+        - Buttons
+        - Header
+        - Navigation 
+7.0 - Utilities: utilities and helper classes with ability to override anything which goes before in the triangle, eg. hide helper class
+        - Alignment	    
+        - Color
+        - Size
+
+--------------------------------------------------------------*/
+
+
+/*--------------------------------------------------------------
+3.0 - GENERIC 
+-------------------------------------------------------------- */
+
+* {
+    font-family: 'Open Sans', sans-serif;
+}
+
+/*--------------------------------------------------------------
+4.0 - ELEMENTS 
+-------------------------------------------------------------- */
+
+/* -- BODY -- */
+
+body {
+    background-color: #292929;
+}
+
+
+/* -- LISTS -- */
+
+ul {
+    margin-left: 0;
+}
+
+li {
+    display: inline;
+}
+
+
+/* -- TYPOGRAPHY -- */
+
+h2, .button, .hero-text, a {
+    text-transform: uppercase;
+}
+
+/* -- Headings -- */
+
+h2 {
+    font-size: 1.5rem;
+}
+
+h3 {
+    font-size: 1.4rem;
+}
+
+/* -- Paragraphs -- */
+
+footer p {
+    color: #8c8c8c;
+    font-size: 0.9rem;
+}
+
+
+/* -- Anchors -- */
+
+a, a:visited {
+    color: #8c8c8c;
+}
+
+a {
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 1rem;
+    font-weight: 300;
+    letter-spacing: 0.1rem;
+}
+
+a:hover {
+    color: #fff;
+}
+
+a.button {
+    color: #f6f4f2;
+}
+
+/* -- Blockquotes -- */
+
+blockquote {
+    border-left: 0;
+}
+
+#quote {
+    padding-left: 2rem;
+    padding-right: 1rem;
+}
+
+@media screen and (min-width: 40em) {
+    #quote {
+        padding-left: 12rem;
+        padding-right: 12rem;
+    }
+}
+
+@media screen and (min-width: 64em) {
+    #quote {
+        padding-left: 25rem;
+        padding-right: 25rem;
+    }
+}
+
+
+/*--------------------------------------------------------------
+6.0 - COMPONENTS 
+-------------------------------------------------------------- */
+
+.top-bar, .top-bar ul, .title-bar {
+    background-color: #292929;
+}
+
+#key-features, #details, #quote, footer, #contact-us {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+#key-features, #details, #contact-us {
+    background-color: #f6f4f2;
+}
+
+@media screen and (max-width: 39.9375em) {
+    div.cell.small-12.medium-6 p {
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+}
+
+@media screen and (min-width: 40em) {
+    div.cell.small-12.medium-6 p, div.cell.small-12.medium-6 a {
+        margin-left: 2rem;
+    }
+}
+
+.card {
+    color: #292929;
+    background-color: #f6f4f2;
+    border: 0;
+}
+
+.card-section {
+    padding-left: 0;
+}
+
+svg {
+    fill: #c2c2c2;
+    width: 16px;
+    height: 16px;
+  }
+  svg:hover {
+    fill:#fff;
+  }
+
+/* -- BUTTONS -- */
+
+.button {
+    background-color: #8c8c8c;
+}
+
+.button:visited {
+    background-color: #8c8c8c;
+}
+
+.button:hover {
+    color: #c2c2c2;
+    background-color: #292929;
+}
+
+
+/* -- HEADER -- */
+
+/* The hero image */
+.hero-image {
+    /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+    background-image: url("../img/full_bleed_1_dark.jpg");
+    
+    /* Set a specific height */
+    height: 30rem;
+    
+    /* Position and center the image to scale nicely on all screens */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    }
+    
+    /* Place text in the middle of the image */
+    
+    .hero-text {
+        font-size: 1.75rem;
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+    }
